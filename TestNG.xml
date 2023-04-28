@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Taskxml" verbose="1" >
+
+    <test name="com.souq.testcases">
+        <groups>
+            <run>
+                <exclude name="Methods"  />
+                <include name="checkinTests"  />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.souq.testcases.DeliveryAddressAndCardDetailsErrorTests">
+                <methods>
+                    <include name="setup" />
+                    <include name="whileAddingAddressUserNameNotEditableTest" />
+                    <include name="acceptingInvalidCountryNameTest" />
+                    <include name="noLimitForPhoneNumbersTest" />
+                    <include name="zipCodeAcceptingAsStringTest" />
+                    <include name="acceptingExpiryDateTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
